@@ -81,5 +81,21 @@ jobs:
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
         package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
         - name: Install dependencies
+        #!/bin/bash
+
+# Navigate to your app directory
+        cd /path/to/your/project
+
+# Pull the latest changes
+        git pull origin main
+
+# Install dependencies (if necessary)
+        npm install
+
+# Restart your application (if necessary)
+        pm2 restart your-app-name
+
+# Or use any other method for deployment like Docker, Kubernetes, etc.
+
 
 
