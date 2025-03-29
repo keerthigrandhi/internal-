@@ -28,10 +28,9 @@ jobs:
       - name: Run tests
         run: npm test
 
-      # Step 5: Deploy to Heroku
+      # Step 5: Deploy to Heroku (using alternative action)
       - name: Deploy to Heroku
-        uses: akshnz/heroku-deploy@v1.3.0
+        uses: heroku/actions/deploy@v1
         with:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-          heroku_app_name: your-heroku-app-name  # Replace with your Heroku app name
-          heroku_email: ${{ secrets.HEROKU_EMAIL }}
+          app_name: your-heroku-app-name  # Replace with your Heroku app name
